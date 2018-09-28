@@ -1,0 +1,62 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/counselling/index",
+    "pages/counselling/consultingprice/consultingprice",
+    "pages/counselling/consultingform/consultingform",
+    "pages/consultant/consultant",
+    "pages/consultant/selectdate/selectdate",
+    "pages/application/application", 
+    "pages/mine/index",
+    "pages/mine/admission/admission",
+    "pages/mine/coupon/coupon",
+    "pages/mine/voucher/voucher",
+    "pages/mine/guide/guide",
+    "pages/mine/follow/follow",
+    "pages/mine/reservation/reservation",
+    "pages/mine/reservationdetails/reservationdetails",
+    "pages/search/search",
+    "pages/kf/kf",
+    "pages/screen/screen",
+    "pages/success/success",
+    "pages/auth/auth",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百心理",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#6dcaaa",
+    "backgroundColor":"#ffffff",
+    "list": [
+      {
+        "text": "百专家",
+        "pagePath": "pages/home/index",
+        "iconPath": "images/nav/home.png",
+        "selectedIconPath": "images/nav/home-active.png"
+      },
+      {
+        "text": "百咨询",
+        "pagePath": "pages/counselling/index",
+        "iconPath": "images/nav/counselling.png",
+        "selectedIconPath": "images/nav/counselling-active.png"
+      },
+      {
+        "text": "个人中心",
+        "pagePath": "pages/mine/index",
+        "iconPath": "images/nav/mine.png",
+        "selectedIconPath": "images/nav/mine-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

@@ -1,0 +1,16 @@
+<view class='select_bj' style='background:url("https://www.baixl001.com/mentality/picture/08.png");background-size:cover;'>
+  <view class='select_title'>请选择咨询价位</view>
+  <view class='select_operation'>滑动选择价位</view>
+</view>
+<view class='price_pael_box'>
+  <view class='price_pael'>
+    <picker-view style="width: 100%; height: 500rpx;" value="" bindchange="bindChange">
+        <picker-view-column style="margin-top:-100rpx;">
+            <view class='price_pael_item' style="line-height: 50px;" wx:for="{{priceArry}}" data-price="{{item.select}}" wx:key="index">        
+                {{item.name}} 
+            </view>
+        </picker-view-column>
+    </picker-view>
+    <button class='pael_btn' bindtap='goNext'>下一步</button>
+  </view>
+</view>

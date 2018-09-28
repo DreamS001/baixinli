@@ -1,0 +1,126 @@
+/* pages/mine/reservationdetails/reservationdetails.wxss */
+.list_box{
+  width: 100%;
+  border-top: 1px solid #f7f7f7;
+}
+
+.list_box .item{
+  width: 100%;
+  height: 160rpx;
+  position: relative;
+  background: #FFF;
+  display: flex;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.list_box .item:last-child{
+  margin-bottom: 0rpx;
+}
+.list_box .item .left_box{
+  width: 22%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list_box .item .left_box image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.list_box .item .right_box{
+  width: 78%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 36rpx 24rpx;
+  box-sizing: border-box;
+}
+.list_box .item .right_box .item_title{
+  width: 100%;
+  position: relative;
+}
+.list_box .item .right_box .item_title .title{
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin-right: 21rpx;
+  margin-bottom: 20rpx;
+}
+.list_box .item .right_box .item_title .jb{
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.list_box .item .right_box .item_label{
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.list_box .item .right_jt{
+  width: 30rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_jt_img{
+  width: 20rpx;
+	height: 30rpx;
+}
+.method{
+  width: 100%;
+  height: 178rpx;
+  margin: 20rpx auto 0;
+  border-bottom: 1rpx solid #dcdcdc;
+  padding: 45rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFF;
+}
+.method_item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.method_item:first-child{
+  font-size: 30rpx;
+}
+.total{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  padding-right: 24rpx;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+.total text{
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #6dcaaa;
+  margin-left: 40rpx;
+}

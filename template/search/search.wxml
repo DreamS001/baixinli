@@ -1,0 +1,10 @@
+<template name="search">
+  <view class='page_row' bindtap="suo">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="" placeholder-class="phcolor" placeholder="咨询师/问题关键词"/>
+      </view>
+    </view>
+  </view>
+</template>

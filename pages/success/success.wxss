@@ -1,0 +1,38 @@
+/* pages/success/success.wxss */
+.success_box{
+  width: 100%;
+  padding: 150rpx 200rpx 100rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success_box .success_img{
+  width: 162rpx;
+	height: 162rpx;
+  border-radius: 50%;
+  margin-bottom: 40rpx;
+}
+.success_box text{
+  font-size: 31rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 60rpx;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.success_Ok{
+  width: 624rpx;
+	height: 90rpx;
+  margin: 0 auto;
+	background-color: #6dcaaa;
+	border-radius: 45rpx;
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

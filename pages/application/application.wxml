@@ -1,0 +1,65 @@
+<!--pages/application/application.wxml-->
+<view class='application_box'>
+  <view class='kf_proposal'>
+    <view class='proposal_title'>
+      姓名
+    </view>
+    <view class='proposal_desc'>
+      <input placeholder-class="place-holder" class="input-text" name="username" bindinput="inputs1" placeholder="请输入" />
+    </view>
+  </view>
+  <view class='kf_proposal'>
+    <view class='proposal_title'>
+      性别
+    </view>
+    <view class='proposal_desc'>
+      <input placeholder-class="place-holder" disabled='ture' bindchange="bindPickerChange" bindtap="getSex" bindinput="inputs6" class="input-text" name="username" placeholder="{{array[index]}}" />
+    </view>
+  </view>
+  <view class='kf_proposal'>
+    <view class='proposal_title'>
+      年龄
+    </view>
+    <view class='proposal_desc'>
+      <input placeholder-class="place-holder" bindinput="inputs2" class="input-text" name="username" placeholder="请输入" />
+    </view>
+  </view>
+  <view class='kf_proposal'>
+    <view class='proposal_title'>
+      手机号
+    </view>
+    <view class='proposal_desc'>
+      <input placeholder-class="place-holder" bindinput="inputs3" class="input-text" name="username" placeholder="请输入" />
+    </view>
+  </view>
+  <view class='kf_proposal'>
+    <view class='proposal_title'>
+      咨询方式
+    </view>
+    <view class='proposal_desc'>
+      <input placeholder-class="place-holder" class="input-text" bindinput="inputs4" name="username" disabled='ture' value='电话咨询        {{basicsInfo.doctorMoney}}元/50分钟' />
+    </view>
+  </view>
+  <view class='kf_proposal'>
+    <view class='proposal_title'>
+      问题描述
+    </view>
+    <view class='proposal_desc'>
+      <textarea class="areas" placeholder-class="place-holder" placeholder='简单的描述下您的困惑吧...' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs5"> 
+          <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+      </textarea>
+    </view>
+  </view>
+  <view class='application_desc'>
+    <text>1.建议填写真实信息，如有法律纠纷有助于保障您的权益;</text>
+    <text>2.本页姓名和联系方式是必填项;</text>
+    <text>3.为了让咨询师更充分了解你的情况，其他信息也请认真填写.</text>
+  </view>
+</view>
+<view class="mask_box {{maskShow?'show':''}}">
+  <view class='sex_box'>
+    <text data-index="1" bindtap="getSex1">女</text>
+    <text data-index="2" bindtap="getSex1">男</text>
+  </view>
+</view>
+<button class='goPay' bindtap="goPay">去付款</button>

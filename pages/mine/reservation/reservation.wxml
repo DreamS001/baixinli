@@ -1,0 +1,60 @@
+<block wx:if="{{reservationdetailsList.length==0}}">
+    <view class="bg_black">暂无数据</view>
+</block>
+<block wx:else>
+  <view class='list_box'>
+    <block wx:for="{{reservationdetailsList}}" wx:key="{{index}}">
+      <navigator url="../reservationdetails/reservationdetails?doctorId={{item.orderUserId}}" hover-class="none" class='item'>
+        <view class='left_box'>
+          <image src='{{item.doctorHead}}'></image>
+        </view>
+        <view class='right_box'>
+          <view class='item_title'>
+            <text class='title'>{{item.doctorName}}</text>
+            <text class='jb'>电话咨询</text>
+          </view>
+          <view class='item_desc'>
+            {{item.orderTime}}
+          </view>
+          <view class='item_label'>
+            {{item.doctorMoney}}元/次
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!-- <view class='item'>
+      <view class='left_box'>
+        <image src='../../../images/zxs.png'></image>
+      </view>
+      <view class='right_box'>
+        <view class='item_title'>
+          <text class='title'>丁雪清</text>
+          <text class='jb'>电话咨询</text>
+        </view>
+        <view class='item_desc'>
+          2018年08月31日（周五） 13:00-13:40
+        </view>
+        <view class='item_label'>
+          500元/次
+        </view>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='left_box'>
+        <image src='../../../images/zxs.png'></image>
+      </view>
+      <view class='right_box'>
+        <view class='item_title'>
+          <text class='title'>丁雪清</text>
+          <text class='jb'>电话咨询</text>
+        </view>
+        <view class='item_desc'>
+          2018年08月31日（周五） 13:00-13:40
+        </view>
+        <view class='item_label'>
+          500元/次
+        </view>
+      </view>
+    </view> -->
+  </view>
+</block>

@@ -1,0 +1,251 @@
+/* pages/screen/screen.wxss */
+@import "../../template/search/search.wxss";
+page{
+  background: #FFF;
+}
+.serach_box{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+/* 筛选 */
+#swiper-tab {
+  width: 100%;
+  position: relative;
+}
+ 
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: white;
+}
+ 
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.333%;
+  color: #666;
+  border-bottom: 0rpx;
+  position: relative;
+}
+ 
+.swiper-tab-list i {
+  position: absolute;
+  bottom: 30%;
+  right: 20%;
+  width: 0px;
+  height: 0px;
+  border: 5px solid #4e4e4e;
+  border-top-color: #4e4e4e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+ 
+.on {
+  color: #6dcaaa;
+}
+ 
+.on i {
+  border: 5px solid #6dcaaa;
+  border-top-color: #6dcaaa;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+ 
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+ 
+.swiper-box view {
+  text-align: center;
+}
+ 
+.swiper-item {
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  top: 80rpx;
+  z-index: 333333;
+  left: 0;
+  animation: displays 1s;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+ 
+@keyframes displays {
+  from {
+    height: 0px;
+  }
+ 
+  to {
+    height: 600rpx;
+  }
+}
+ 
+.swiper-beijing {
+  width: 100%;
+  height: 200%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  display: none;
+  z-index: 888;
+  animation: 1s;
+}
+.shaixuankuang view{
+  padding: 24rpx 0;
+  box-sizing: border-box;
+}
+.price_box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.price_item{
+  width: 200rpx;
+  height: 60rpx;
+  background-color: #f7f7f7;
+	border-radius: 6rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.price_item:nth-child(3n){
+  margin-right: 0;
+}
+.price_item text{
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+/*// 筛选  */
+ 
+.shaixuankuang {
+  width: 100%;
+  height: 600rpx;
+  overflow: hidden;
+  max-height: 600rpx;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ 
+.shaixuan {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+ 
+.shuaixuantiaojian {
+  width: 95%;
+  padding: 0 2.5% 1%;
+  display: block;
+  font-size: 15px;
+  color: #999;
+}
+ 
+.chose-txt {
+  /* border-radius: 6px; */
+  font-size: 26rpx;
+  width: 28%;
+  margin: 4px 14rpx;
+  float: left;
+}
+ 
+.chose-p {
+  line-height: 25px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  float: left;
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+}
+ 
+.zidingyi {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+ 
+.zidingyi span {
+  float: left;
+  font-size: 16px;
+  line-height: 40px;
+  color: #666;
+  margin-right: 15rpx;
+}
+ 
+.zidingyi input {
+  width: 50px;
+  padding-left: 10rpx;
+  float: left;
+  margin-top: 10rpx;
+  font-size: 15px;
+  line-height: 40px;
+  border: solid 1px #eee;
+  color: #666;
+}
+ 
+.zidingyi p {
+  float: left;
+  margin: 0 15rpx;
+  line-height: 40px;
+  color: #666;
+}
+ 
+.zidingyi button {
+  height: 28px;
+  float: left;
+  margin: 10rpx 0 0 25rpx;
+  font-size: 13px;
+  line-height: 28px;
+  /* border: solid 1px #eee; */
+  color: #666;
+}
+ 
+.qingkong {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+.qingkong button{
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.qingkong .queren{
+  background-color: #6dcaaa;
+  color: #FFF;
+}
+

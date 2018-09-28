@@ -1,0 +1,97 @@
+/* pages/mine/reservation/reservation.wxss */
+.bg_black{
+  display: flex;
+  justify-content: center;
+  margin-top: 85rpx;
+  color: #6dcaaa;
+}
+.list_box{
+  width: 100%;
+  border-top: 1px solid #f7f7f7;
+}
+
+.list_box .item{
+  width: 94%;
+  height: 266rpx;
+  position: relative;
+  background: #FFF;
+  display: flex;
+  margin: 20rpx auto 0;
+}
+.list_box .item:last-child{
+  margin-bottom: 0rpx;
+}
+.list_box .item .left_box{
+  width: 22%;
+  height: 100%;
+  padding: 42rpx 29rpx;
+  box-sizing: border-box;
+}
+.list_box .item .left_box image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.list_box .item .right_box{
+  width: 78%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 36rpx 24rpx;
+  box-sizing: border-box;
+}
+.list_box .item .right_box .item_title{
+  width: 100%;
+  position: relative;
+}
+.list_box .item .right_box .item_title .title{
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin-right: 21rpx;
+  margin-bottom: 20rpx;
+}
+.list_box .item .right_box .item_title .jb{
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.list_box .item .right_box .item_title .time{
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #6dcaaa;
+  position: absolute;
+  top: 10rpx;
+  right: 24rpx;
+}
+.list_box .item .right_box .item_desc{
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 39rpx;
+	letter-spacing: 0rpx;
+	color: #666666;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  margin: 35rpx 0; 
+}
+
+.list_box .item .right_box .item_label{
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #6dcaaa;
+}

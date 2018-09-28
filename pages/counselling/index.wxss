@@ -1,0 +1,58 @@
+/* pages/counselling/index.wxss */
+.container{
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.personal{
+  width: 702rpx;
+  height: 270rpx;
+  margin-top: 30rpx;
+  background-color: #e0fafc;
+	border-radius: 10rpx;
+  position: relative;
+}
+.personal:last-child{
+  margin-bottom: 30rpx;
+}
+.personal .number{
+  position: absolute;
+  top: 65rpx;
+  left: 340rpx;
+  font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.personal .problem{
+  position: absolute;
+  top: 124rpx;
+  left: 47rpx;
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 48rpx;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.personal .now_go{
+  position: absolute;
+  top: 186rpx;
+  left: 48rpx;
+  width: 140rpx;
+  height: 40rpx;
+  background-color: #51bad1;
+	border-radius: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  border: none;
+}
+button[class="now_go"]::after {
+  border: 0;
+}

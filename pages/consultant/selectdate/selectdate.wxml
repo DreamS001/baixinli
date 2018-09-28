@@ -1,0 +1,171 @@
+<!--pages/consultant/selectdate/selectdate.wxml-->
+<view class='selectdate_box'>
+  <view class='future_time'>未来7天可预约时间（北京时间）</view>
+  <view class="time">
+    <view class="navbar">
+      <!-- <block wx:for="{{navbar}}" wx:key="index">
+        <view class='item_box' data-idx="{{index}}" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{item.navname}}</text>
+          <text class="item {{item.states==0 ? 'actives' : 'active'}}">{{item.data}}</text>
+          <text class="item {{item.states==0 ? 'actives' : 'active'}}">{{item.states==1?'':'已满'}}</text>
+        </view>
+      </block> -->
+
+      <!-- <block wx:for="{{dateList}}" wx:key="index">
+        <block wx:for="{{item}}" wx:for-item="items" wx:key="{{index}}">
+          <view class='item_box' data-idx="{{index}}" bindtap="navbarTap" wx:key="unique"> 
+            <text class="item">{{items}}</text>
+            <text class="item {{item.states==0 ? 'actives' : 'active'}}"></text>
+            <text class="item {{item.states==0 ? 'actives' : 'active'}}">{{item.states==1?'':'已满'}}</text>
+          </view>
+        </block>
+      </block> -->
+
+
+      <view class='item_box' data-idx="0" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderMon}}</text>
+          <text class="item">{{dateQ[0].one_mon}}</text>
+      </view>
+      <view class='item_box' data-idx="1" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderTues}}</text>
+          <text class="item">{{dateQ[0].two_tues}}</text>
+        </view>
+        <view class='item_box' data-idx="2" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderWed}}</text>
+          <text class="item">{{dateQ[0].three_wed}}</text>
+        </view>
+        <view class='item_box' data-idx="3" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderThurs}}</text>
+          <text class="item">{{dateQ[0].four_thurs}}</text>
+        </view>
+        <view class='item_box' data-idx="4" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderFri}}</text>
+          <text class="item">{{dateQ[0].five_fri}}</text>
+        </view>
+        <view class='item_box' data-idx="5" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderSat}}</text>
+          <text class="item">{{dateQ[0].sex_sat}}</text>
+        </view>
+        <view class='item_box' data-idx="6" bindtap="navbarTap" wx:key="unique"> 
+          <text class="item">{{dateList[0].doctorOrderSun}}</text>
+          <text class="item">{{dateQ[0].seven_sun}}</text>
+        </view>
+      
+    </view>
+    <swiper class='swiper_box' current="{{currentTab}}"  bindchange="switchTab">
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time1==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time1}}" wx:key="{{index}}">
+              <view data-week='{{dateQ[0].one_mon}}' data-date="{{dateList[0].doctorOrderMon}}" data-id="{{index}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time2==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time2}}" wx:key="{{index}}">
+              <view data-week='{{dateQ[0].two_tues}}' data-id="{{index}}" data-date="{{dateList[0].doctorOrderTues}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time3==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time3}}" wx:key="{{index}}">
+              <view  data-week='{{dateQ[0].three_wed}}' data-date="{{dateList[0].doctorOrderWed}}" data-id="{{index}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time4==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time4}}" wx:key="{{index}}">
+              <view data-week='{{dateQ[0].four_thurs}}' data-date="{{dateList[0].doctorOrderThurs}}" data-id="{{index}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time5==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time5}}" wx:key="{{index}}">
+              <view data-week='{{dateQ[0].five_fri}}' data-date="{{dateList[0].doctorOrderFri}}" data-id="{{index}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time6==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time6}}" wx:key="{{index}}">
+              <view data-week='{{dateQ[0].sex_sat}}' data-date="{{dateList[0].doctorOrderSat}}" data-id="{{index}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <block wx:if="{{time[0].time7==''}}">
+            <view class='already'>
+              已满
+            </view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{time[0].time7}}" wx:key="{{index}}">
+              <view data-week='{{dateQ[0].seven_sun}}' data-date="{{dateList[0].doctorOrderSun}}" data-id="{{index}}" data-time="{{item}}" bindtap='getDate' class='time_item {{timeIndex==index?"activeselect":""}}'>{{item}}</view>
+            </block>
+          </block>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+
+<view class='footer'>
+  <view class='left_footer'>
+    <block wx:if="{{addTime==''}}">
+      <view class='no_select'>您还未选择咨询时间</view>
+    </block>
+    <block wx:else>
+      <view class='no_select'>{{addTime}}</view>
+    </block>
+  </view>
+  <view class='right_footer' bindtap='sure'>确定</view>
+</view>
+
+<!-- 
+style="{{item.selectId == sex?' color: #fff;background:#6dcaaa':'color: #999999;background:#f7f7f7'}}" -->

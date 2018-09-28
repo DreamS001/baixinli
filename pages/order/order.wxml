@@ -1,0 +1,63 @@
+<!--pages/order/order.wxml-->
+<view class="mtest_1" >
+  <block wx:if="{{doctorInfo.length==0}}">
+    <view class='warrinfo'>提交订单后，管理员会自动给你分配咨询师。</view>
+  </block>
+  <block wx:else>
+    <view class="mtest_6">
+      <image src="{{doctorInfo.doctorHead}}" style=" width:140rpx;height:140rpx;"  border="0"   bindtap="mtest_7_click"  class="mtest_7" ></image>
+      <view class="mtest_8" >
+        <text class="mtest_9" >{{doctorInfo.doctorName}}</text>
+        <text class="mtest_11" >{{doctorInfo.doctorGrade}}</text>
+        <text class="mtest_10" >{{doctorInfo.doctorPhone}}</text>
+      </view>
+      <view class="mtest_12" >
+        <text class="mtest_13" >￥{{doctorInfo.doctorMoney}}</text>
+        <!-- <text class="mtest_14" >*1</text> -->
+      </view>
+    </view>
+  </block>
+    <view class="mtest_24" >
+      <view class="mtest_25" >
+        <text class="mtest_26" >我的优惠券</text>
+        <block wx:if="{{couponList.length==0}}">
+          <view class="mtest_27" >暂无可用优惠券</view>
+        </block>
+        <block wx:else>
+          <view class='coupon'>
+            <radio-group class="radio-group" bindchange="radioChange">
+              <block wx:for="{{couponList}}" wx:key="{{index}}">
+                <label class="radio">
+                  <view class='coupon_item'>
+                      <view class='couponBox'>
+                        <view class='coupon_items'>
+                          <view class='coupon_price'>
+                            ￥<text>{{item.sum}}</text>
+                          </view>
+                          <view class='coupon_desc'>
+                            <text>满{{item.termSum}}元可用</text>
+                            <text>有效期{{item.getTime}}-{{item.endTime}}</text>
+                          </view>
+                          <view class='coupon_stats'>
+                            <radio value="{{item.id}}" data-id="{{item.id}}" checked=""/>
+                          </view>
+                        </view>
+                      </view>
+                  </view>
+                </label>
+              </block>
+            </radio-group>
+          </view>
+        </block>
+      </view>
+    </view>
+</view>
+<view class="mtest_50" >
+  <view class="mtest_52" >
+    <text class="mtest_53" >实付款：</text>
+    <text class="mtest_54" >￥{{total}}</text>
+  </view>
+  <view class="mtest_51" >
+    <text class="mtest_55" bindtap='goOrder'>提交订单</text>
+  </view>
+</view>

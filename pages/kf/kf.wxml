@@ -1,0 +1,24 @@
+<!--pages/kf/kf.wxml-->
+<view class='kf_proposal'>
+  <view class='proposal_title'>
+    建议与反馈
+  </view>
+  <view class='proposal_desc'>
+    <textarea class="areas" placeholder-class="place-holder" placeholder='输入您想说的话...' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs1"> 
+        <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+    </textarea>
+  </view>
+</view>
+
+<view class='kf_proposal'>
+  <view class='proposal_title'>
+    联系方式
+  </view>
+  <view class='proposal_desc'>
+    <input placeholder-class="place-holder" class="input-text" name="username" bindinput="inputs2" placeholder="请输入您的电话" />
+  </view>
+</view>
+
+<view class='kf_btn'>
+  <button bindtap='kfBtn'>提交</button>
+</view>

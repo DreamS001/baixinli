@@ -1,0 +1,96 @@
+<!--pages/mine/coupon/coupon.wxml-->
+<!--导航条-->
+  <view class="navbar">
+    <block wx:for="{{navbar}}" wx:key="index">
+      <view class='item_box' data-idx="{{index}}" bindtap="navbarTap" wx:key="unique"> 
+        <text class="item {{currentTab==index ? 'active' : ''}}">{{item.navname}}</text>
+        <text class="line {{currentTab==index ? 'active' : ''}}"></text>
+      </view>
+    </block>
+  </view>
+
+
+  <swiper class='swiper_box' current="{{currentTab}}"  bindchange="switchTab" style="height: {{winHeight-80}}px;">
+      <swiper-item>
+        <scroll-view scroll-y="ture" style="height: {{winHeight-80}}px;">
+          <block wx:if="{{couponList.uc1.length==0}}">
+              <view class="bg_black">暂无优惠券</view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{couponList.uc1}}" wx:key="{{index}}">
+              <view class='couponBox'>
+                <view class='coupon_item'>
+                  <view class='coupon_price'>
+                    ￥<text>{{item.sum}}</text>
+                  </view>
+                  <view class='coupon_desc'>
+                    <text>满{{item.termSum}}元可用</text>
+                    <text>有效期{{item.getTime}}-{{item.endTime}}</text>
+                  </view>
+                  <view class='coupon_stats'>
+                    <view class='stats'>使用</view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="ture" style="height: {{winHeight-80}}px;">
+          <block wx:if="{{couponList.uc2.length==0}}">
+            <view class="bg_black">您还未使用过优惠券</view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{couponList.uc2}}" wx:key="{{index}}">
+              <view class='couponBox'>
+                <view class='coupon_item'>
+                  <view class='coupon_price' style='color: #dedede;'>
+                    ￥<text>{{item.sum}}</text>
+                  </view>
+                  <view class='coupon_desc' style='color: #dedede;'>
+                    <text>满{{item.termSum}}元可用</text>
+                    <text style='color: #dedede;'>有效期{{item.getTime}}-{{item.endTime}}</text>
+                  </view>
+                  <view class='coupon_stats'>
+                    <view class='stats active'>已使用</view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="ture" style="height: {{winHeight-80}}px;">
+          <block wx:if="{{couponList.uc3.length==0}}">
+              <view class="bg_black">近期无过期优惠券</view>
+          </block>
+          <block wx:else>
+            <block wx:for="{{couponList.uc3}}" wx:key="{{index}}">
+              <view class='couponBox'>
+                <view class='coupon_item'>
+                  <view class='coupon_price' style='color: #dedede;'>
+                    ￥<text>{{item.sum}}</text>
+                  </view>
+                  <view class='coupon_desc' style='color: #dedede;'>
+                    <text>满{{item.termSum}}元可用</text>
+                    <text style='color: #dedede;'>有效期{{item.getTime}}-{{item.endTime}}</text>
+                  </view>
+                  <view class='coupon_stats'>
+                    <view class='stats active'>已过期</view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </block>
+        </scroll-view>
+      </swiper-item>
+  </swiper>
+
+<view class='coupon_footer'>
+  <navigator url="../voucher/voucher" hover-class="none" class='goCoupon'>
+    <text>更多好券，去领券中心看看</text>
+    <image class='goCoupon_img' src='../../../images/goright.png'></image>
+  </navigator>
+</view>

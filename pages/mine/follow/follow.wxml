@@ -1,0 +1,50 @@
+<!--pages/mine/follow/follow.wxml-->
+<block wx:if="{{myFollow.length==0}}">
+    <view class="bg_black">暂无数据</view>
+</block>
+<block wx:else>
+  <view class='list_box'>
+    <block wx:for="{{myFollow}}" wx:key="{{index}}">
+      <navigator url="../../consultant/consultant?cId={{myFollow[index].doctorId}}" hover-class="none" class='item'>
+        <view class='left_box'>
+          <image src='{{myFollow[index].doctorHead}}'></image>
+        </view>
+        <view class='right_box'>
+          <view class='item_title'>
+            <text class='title'>{{myFollow[index].doctorName}}</text>
+            <text class='jb'>{{myFollow[index].doctorGrade}}</text>
+            <text class='time'>{{myFollow[index].doctorMoney}}元/次</text>
+          </view>
+          <view class='item_desc'>
+            {{myFollow[index].doctorInfo}}
+          </view>
+          <view class='item_label'>
+            <block wx:for="{{myFollow[index].gad1}}" wx:for-item="items" wx:key="{{index}}">
+              <text>{{items}}</text>
+            </block>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!-- <view class='item'>
+      <view class='left_box'>
+        <image src='../../../images/zxs.png'></image>
+      </view>
+      <view class='right_box'>
+        <view class='item_title'>
+          <text class='title'>丁雪清</text>
+          <text class='jb'>高级咨询师</text>
+          <text class='time'>500元/次</text>
+        </view>
+        <view class='item_desc'>
+          首席专家，以来访者为中心，引导来访者内在探索，着重开拓来访者的心理潜能，以获得智慧和个人的成长。
+        </view>
+        <view class='item_label'>
+          <text>青少年</text>
+          <text>婚姻情感</text>
+          <text>家庭关系</text>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</block>

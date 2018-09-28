@@ -1,0 +1,62 @@
+<!--百咨询-->
+<view class='container'>
+  <block wx:for="{{item}}" wx:key="index"> 
+    <view class='personal' bindtap='goConPrice' data-id="{{item.id}}" style="background-image:url('{{item.itemImg}}');background-size:cover;">
+      <view class='number'>
+        已解决<text>{{item.num}}</text>个问题
+      </view>
+      <view class='problem'>
+        {{item.desc}}
+      </view>
+      <button class='now_go' style='background:{{item.btnBj}};'>立即咨询</button>
+    </view>
+  </block>
+  <!-- <view class='personal' style="background-image:url('http://m.qpic.cn/psb?/V14WQAYN2YtQDt/Nnbiww7LIK.vaH341*.Q3QUFD*q7qW4TwFKLyssJFbE!/b/dDYBAAAAAAAA&bo=vgIOAQAAAAADB5E!&rf=viewer_4');background-size:cover;">
+    <view class='number'>
+      已解决<text>3648</text>个问题
+    </view>
+    <view class='problem'>
+      情感危机 夫妻矛盾 情感挽回 出轨外遇
+    </view>
+    <button class='now_go' style='background:#e77190;'>立即咨询</button>
+  </view>
+  <view class='personal' style="background-image:url('http://m.qpic.cn/psb?/V14WQAYN2YtQDt/iVugVrHRcS0ssgEBZEAVlN68wFnDThv8PzFNV8h5LZk!/b/dDQBAAAAAAAA&bo=vgIOAQAAAAADB5E!&rf=viewer_4');background-size:cover;">
+    <view class='number'>
+      已解决<text>5871</text>个问题
+    </view>
+    <view class='problem'>
+      焦虑抑郁 失眠多梦 强迫症 产后抑郁
+    </view>
+    <button class='now_go' style='background:#65c263;'>立即咨询</button>
+  </view>
+  <view class='personal' style="background-image:url('http://m.qpic.cn/psb?/V14WQAYN2YtQDt/O6VXj6QVYCiX2VOGZpr9hztxzWQ6J7C.W8N9NmjqQWM!/b/dAgBAAAAAAAA&bo=vgIOAQAAAAADB5E!&rf=viewer_4');background-size:cover;">
+    <view class='number'>
+      已解决<text>1158</text>个问题
+    </view>
+    <view class='problem'>
+      工作压力 职业倦怠 职业发展 同事关系
+    </view>
+    <button class='now_go' style='background:#e48639;'>立即咨询</button>
+  </view>
+  <view class='personal' style="background-image:url('http://m.qpic.cn/psb?/V14WQAYN2YtQDt/SsYxeZqmBA6D3qufglL4yahk10SX3BOS1ThqS5CF94g!/b/dDEBAAAAAAAA&bo=vgIOAQAAAAADB5E!&rf=viewer_4');background-size:cover;">
+    <view class='number'>
+      已解决<text>1158</text>个问题
+    </view>
+    <view class='problem'>
+      沟通问题 考试压力 单亲家庭 早点网瘾
+    </view>
+    <button class='now_go' style='background:#728eeb;'>立即咨询</button>
+  </view>
+  <view class='personal' style="background-image:url('http://m.qpic.cn/psb?/V14WQAYN2YtQDt/D6hQNjvTS86C9YDKKPVvd8PDMRMBTGv4PZFdBtdG9NY!/b/dDcBAAAAAAAA&bo=vgIOAQAAAAADB5E!&rf=viewer_4');background-size:cover;">
+    <view class='number' style='left: 213rpx;'>
+      已解决<text>1158</text>个问题
+    </view>
+    <button class='now_go' style='background:#d591eb;'>立即咨询</button>
+  </view>
+  <view class='personal' style="background-image:url('http://m.qpic.cn/psb?/V14WQAYN2YtQDt/8M4KKM*lFq3TQ*DpEMhc9.yr07VR9XbbpCE93LUURec!/b/dDYBAAAAAAAA&bo=vgIOAQAAAAADB5E!&rf=viewer_4');background-size:cover;">
+    <view class='number' style='left: 252rpx;'>
+      已解决<text>1158</text>个问题
+    </view>
+    <button class='now_go' style='background:#91c8eb;'>立即咨询</button>
+  </view> -->
+</view>

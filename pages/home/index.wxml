@@ -1,0 +1,196 @@
+<!--pages/home/index.wxml-->
+<import src="../../template/search/search.wxml"/>
+<!-- banner--start -->
+<view class='banner'>
+  <swiper class='swiper' autoplay="ture"  bindchange="swiperChange" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.banner}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<!-- banner--end -->
+
+<!-- 优惠券 -->
+
+<scroll-view class='coupon' scroll-x style='white-space: nowrap;'>
+  <!-- <view class='coupon'> -->
+    <block wx:for="{{couponList}}" wx:key="{{index}}">
+      <view class='coupon_item' style='display:inline-block;'>
+        <view class='coupon_top'>
+          <view class='coupon_price'>{{item.sum}}</view>
+          <view class='coupon_right'>
+            <text class='coupon_desc'>满{{item.termSum}}可用</text>
+            <text class='coupon_rmb'>RMB</text>
+          </view>
+        </view>
+        <view class='coupon_bottom' bindtap='clickData' data-id="{{item.id}}">立即领取</view>
+      </view>
+    </block>
+  <!-- </view> -->
+</scroll-view>
+
+
+
+
+<!-- add--start -->
+<view class='add_box'>
+  <view class='add'>
+    <view class='add_title'>
+      <text>心理咨询</text>
+    </view>
+    <view class='add_desc'>
+      <view>如果您对<text>心理咨询</text>有选择困难...</view>
+      <view>或想<text>简单、有效</text>的解决问题！</view>
+      <view>请点击<text>立即咨询</text>，我们帮您匹配。</view>
+    </view>
+    <view class='add_btn'>
+      <button class='btn' bindtap="goto">立即咨询</button>
+    </view>
+  </view>
+</view>
+<!-- add--end -->
+
+<!-- counselling--start -->
+  <view class='container'>
+    <view id="swiper-tab">
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0"  bindtap="tabNav">{{first}}
+          <i></i>
+        </view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1"  bindtap="tabNav">{{second}}
+          <i></i>
+        </view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="tabNav">{{thirds}}
+          <i></i>
+        </view>
+      </view>
+      <!-- 列表 -->
+      <block wx:if="{{consultanlList.length==0}}">
+        <view class="bg_black">暂无数据</view>
+      </block>
+      <block wx:else>
+        <view class='list_box'>
+          <block wx:for="{{consultanlList}}" wx:key="key">
+            <navigator url="../consultant/consultant?cId={{item.doctorId}}" hover-class="navigator-hover" class='item'>
+              <view class='left_box'>
+                <!-- <image src='../../images/zxs.png'></image> -->
+                <image src='{{item.doctorHead}}'></image>
+              </view>
+              <view class='right_box'>
+                <view class='item_title'>
+                  <text class='title'>{{item.doctorName}}</text>
+                  <text class='jb'>{{item.doctorGrade}}</text>
+                  <text class='time'>{{item.doctorMoney}}元/次</text>
+                </view>
+                <view class='item_desc'>
+                  {{item.doctorInfo}}
+                </view>
+                <view class='item_label'>
+                <block wx:for="{{item.gad1}}" wx:for-item="items" wx:key="{{index}}">
+                  <text>{{items}}</text>
+                </block>
+                  <!-- <text>婚姻情感</text>
+                  <text>家庭关系</text> -->
+                </view>
+              </view>
+            </navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+<!-- counselling--end -->
+<view class='serach_box' wx:if="{{show}}" bindtap='goSearch'>
+  <template is="search"></template>
+</view>
+
+
+<!-- 筛选 -->
+
+<view class='screenBox' style='display:{{displays}}'>
+  <!-- 选项 -->
+  <view class='selectBox'>
+    <view id="swiper-tab">
+        <view class="swiper-tab">
+          <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0"  bindtap="tabNav">{{first}}
+            <i></i>
+          </view>
+          <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1"  bindtap="tabNav">{{second}}
+            <i></i>
+          </view>
+          <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="tabNav">{{thirds}}
+            <i></i>
+          </view>
+        </view>
+
+        
+        <swiper current="{{currentTab}}" duration="1000" bindchange="switchTab" class="swiper-item" style='height: {{winHeight-150}}px'>
+          <swiper-item class="shaixuankuang">
+            <view>
+              <view class='price_box'>
+                <block wx:for="{{priceArry}}" wx:key="key">
+                <view class='price_item' data-id="{{item.selectId}}" bindtap='chosePrice' style="{{item.selectId == price?' color: #fff;background:#6dcaaa':'color: #999999;background:#f7f7f7'}}">
+                  <text>{{item.price}}</text>
+                </view>
+                </block>
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item class="shaixuankuang">
+            <view>
+              <view class='price_box' style='justify-content: center;'>
+                <block wx:for="{{sexArry}}" wx:key="key">
+                <view class='price_item' data-id="{{item.selectId}}" bindtap='choseSex' style="{{item.selectId == sex?' color: #fff;background:#6dcaaa':'color: #999999;background:#f7f7f7'}}">
+                  <text>{{item.name}}</text>
+                </view>
+                </block>
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="ture" style="height: {{winHeight-30}}px;">
+            <view class="shaixuan">
+              <span class="shuaixuantiaojian">咨询类型</span>
+              <block wx:for="{{array}}" wx:key="key">
+                <view class="chose-txt" data-id="{{item.selectId}}" bindtap="choseTxtColor" style="{{item.selectId == one?' color: #fff;background:#6dcaaa':'color: #999999;background:#f7f7f7'}}">
+                  <text class="chose-p">{{item.name}}</text>
+                </view>
+              </block>
+            </view>
+            <view class="shaixuan">
+              <span class="shuaixuantiaojian">咨询师从业年限</span>
+              <block wx:for="{{cyyear}}" wx:key="key">
+                <view class="chose-txt" data-id="{{item.selectId}}" bindtap="chaoxiang" style="{{item.selectId == two?' color: #fff;background:#6dcaaa':'color: #999999;background:#f7f7f7'}}">
+                  <text class="chose-p">{{item.name}}</text>
+                </view>
+              </block>
+            </view>
+    
+            <view class="shaixuan">
+              <span class="shuaixuantiaojian">擅长领域</span>
+              <block wx:for="{{louceng}}" wx:key="key">
+                <view class="chose-txt" data-id="{{item.selectId}}" bindtap="louceng" style="{{item.selectId == third?' color: #fff;background:#6dcaaa':'color: #999999;background:#f7f7f7'}}">
+                  <text class="chose-p">{{item.name}}</text>
+                </view>
+              </block>
+            </view>
+            </scroll-view>
+          </swiper-item>
+        </swiper>
+      </view>
+  </view>
+  <view class="qingkong">
+    <view class="tianjian" bindtap="qingchu">重置</view>
+    <view class="queren" bindtap="queren">确认</view>
+  </view>
+</view>
+
+
+

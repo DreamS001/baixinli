@@ -1,0 +1,154 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.4",
+	"appid": "wxcc0d66b332c8f1c1",
+	"projectname": "bxl",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 18,
+			"list": [
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/mine/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "百咨询",
+					"pathName": "pages/counselling/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/auth/auth",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "咨询师",
+					"pathName": "pages/consultant/consultant",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "客服",
+					"pathName": "pages/kf/kf",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约申请",
+					"pathName": "pages/application/application",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约成功",
+					"pathName": "pages/success/success",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "筛选",
+					"pathName": "pages/screen/screen",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "入驻",
+					"pathName": "pages/mine/admission/admission",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠券",
+					"pathName": "pages/mine/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠券中心",
+					"pathName": "pages/mine/voucher/voucher",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "咨询指南",
+					"pathName": "pages/mine/guide/guide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关注",
+					"pathName": "pages/mine/follow/follow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约",
+					"pathName": "pages/mine/reservation/reservation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约详情",
+					"pathName": "pages/mine/reservationdetails/reservationdetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择咨询价位",
+					"pathName": "pages/counselling/consultingprice/consultingprice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择时间",
+					"pathName": "pages/consultant/selectdate/selectdate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order"
+				}
+			]
+		}
+	}
+}

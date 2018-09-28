@@ -1,0 +1,46 @@
+/* pages/mine/admission/admission.wxss */
+page{
+  background: #fff;
+  border-top: 1rpx solid #f7f7f7;
+}
+.admission_box{
+  width: 100%;
+  padding: 50rpx 100rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admission_title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 36rpx;
+	font-weight: 500;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin-bottom: 98rpx;
+}
+.admission_ewm{
+  width: 260rpx;
+  height: 260rpx;
+}
+.admission_word{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100rpx;
+  font-size: 29rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.admission_word text:last-child{
+  font-weight: 700;
+}

@@ -1,0 +1,13 @@
+<!--pages/mine/admission/admission.wxml-->
+
+<view class='admission_box'>
+  <view class='admission_title'>入驻与认证</view>
+  <block wx:for="{{imgalist}}" wx:key="{{index}}" wx:for-item="image">
+    <image class='admission_ewm' src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+  </block>
+  <view class='admission_word'>
+    <view>请在微信搜索公众号<text>【百心理咨询师入口】</text></view>
+    <text>关注后进行入驻</text>
+    <text>也可扫码上方二维码入驻</text>
+  </view>
+</view>

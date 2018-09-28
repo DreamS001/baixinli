@@ -1,0 +1,17 @@
+<!--pages/mine/voucher/voucher.wxml-->
+<view class='couponBox'>
+  <block wx:for="{{couponList}}" wx:key="{{index}}">
+    <view class='coupon_item'>
+      <view class='coupon_price'>
+        ￥<text>{{item.sum}}</text>
+      </view>
+      <view class='coupon_desc'>
+        <text>满{{item.sum}}元可用</text>
+        <text style='margin-top:20rpx;'>领取后30天之内有效</text>
+      </view>
+      <view class='coupon_stats'>
+        <view class='stats' bindtap='clickData' data-id="{{item.id}}">立即领取</view>
+      </view>
+    </view>
+  </block>
+</view>

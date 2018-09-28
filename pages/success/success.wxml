@@ -1,0 +1,8 @@
+<!--pages/success/success.wxml-->
+
+<view class='success_box'>
+  <image class='success_img' src='../../images/success.png'></image>
+  <text>预约成功</text>
+  <text>您的预约会尽快进行处理</text>
+</view>
+<button class='success_Ok' bindtap='successOk'>确定</button>

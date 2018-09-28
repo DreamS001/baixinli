@@ -1,0 +1,54 @@
+/* pages/mine/guide/guide.wxss */
+page{
+  background: #fff;
+}
+.item-list{
+  width: 100%;
+  padding: 35rpx 24rpx;
+  box-sizing: border-box;
+}
+.vshow{
+  display:block !important;
+}
+.vhide{
+  display:none !important;
+}
+.item-tit{
+  height:98rpx;
+  line-height:80rpx;
+  background: #fff;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-con{
+  display:none;
+  padding: 0 25rpx 20rpx 25rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 42rpx;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.img{
+  width: 50rpx;
+  height: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img .guide_img{
+  width: 24rpx;
+  height: 31rpx;
+}
+.img .guide_img_active{
+  width: 22rpx;
+  height: 12rpx;
+}

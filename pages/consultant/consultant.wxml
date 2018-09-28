@@ -1,0 +1,185 @@
+<view class='consultant_top'>
+  <view class='user_img'>
+      <image src='{{consultanlInfo.coun.doctorHead}}'></image>
+    </view>
+  <text class="userinfo-nickname">{{consultanlInfo.coun.doctorName}}</text>
+</view>
+<view class='consultant_cost'>
+  <view class='consultant_cost_item'>
+    <text class='block_word'>{{consultanlInfo.coun.doctorMoney}}元/次</text>
+    <text>咨询费用</text>
+  </view>
+  <view class='consultant_cost_item'>
+    <text class='block_word'>{{consultanlInfo.count}}人</text>
+    <text>关注</text>
+  </view>
+  <view class='consultant_cost_item'>
+    <text class='block_word'>电话咨询</text>
+    <text>咨询方式</text>
+  </view>
+</view>
+
+<view class='navbar_box'>
+  <view class="navbar">
+    <block wx:for="{{navbar}}" wx:key="index">
+      <view class='item_box' data-idx="{{index}}" bindtap="navbarTap" wx:key="unique"> 
+        <text class="item {{currentTab==index ? 'active' : ''}}">{{item.navname}}</text>
+        <text class="line {{currentTab==index ? 'active' : ''}}"></text>
+      </view>
+    </block>
+  </view>
+
+
+  <swiper class='swiper_box' current="{{currentTab}}"  bindchange="switchTab" style="height: {{winHeight-80}}px;">
+      <swiper-item>
+        <scroll-view scroll-y="ture" style="height: {{winHeight-95}}px;">
+          <view>
+            <view class='grjj consultant_public'>
+              <text class='consultant_title'>个人简介</text>
+              <text class='grjj_desc'>{{consultanlInfo.coun.doctorInfo}}
+              </text>
+            </view>
+            <view class='direction_box consultant_public'>
+              <text class='consultant_title'>擅长方向</text>
+              <view class='bga'>
+                <block wx:for="{{consultanlInfo.coun.gad1}}" wx:for-item="items"  wx:key="index">
+                  <text class='bga_item'>{{items}}</text>
+                </block>
+              </view>
+            </view>
+            <view class='consultant_public zizhi'>
+                <text class='consultant_title'>专业资质</text>
+                <text class='grjj_desc'>{{consultanlInfo.coun.doctorMajor}}</text>
+            </view>
+            <view class='consultant_public cost_box'>
+                <text class='consultant_title'>费用说明</text>
+                <text class='grjj_desc'>每次咨询50分钟，一般一周一次。</text>
+            </view>
+          </view>
+          <view class='notice'>
+            咨询师本人承诺以上资料真实准确，接受公众监督，并为此承担相应的法律责任。如果您发现有虚假信息，请发邮件给baixinli001@163.com进行投诉。
+          </view>
+          <view class='bottom_box'></view>
+        </scroll-view>
+        
+      </swiper-item>
+      <swiper-item>
+        <view class='time_box'>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderMon}}</view>
+            <view class='item_box_date'>{{dateList[0].one_mon}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time1==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time1}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderTues}}</view>
+            <view class='item_box_date'>{{dateList[0].two_tues}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time2==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time2}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderWed}}</view>
+            <view class='item_box_date'>{{dateList[0].three_wed}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time3==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time3}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderThurs}}</view>
+            <view class='item_box_date'>{{dateList[0].four_thurs}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time4==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time4}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderFri}}</view>
+            <view class='item_box_date'>{{dateList[0].five_fri}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time5==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time5}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderSat}}</view>
+            <view class='item_box_date'>{{dateList[0].sex_sat}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time6==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time6}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+          <view class='item_box_time'>
+            <view class='item_box_week'>{{week[0].doctorOrderSun}}</view>
+            <view class='item_box_date'>{{dateList[0].seven_sun}}</view>
+            <view class='item_box_times'>
+              <block wx:if="{{timeArr[0].time7==''}}">
+                <view class='box_time'>已满</view>
+              </block>
+              <block wx:else>
+                <block wx:for="{{timeArr[0].time7}}" wx:key="{{index}}">
+                  <view class='box_time active'>{{item}}</view>
+                </block>
+              </block>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+  </swiper>
+  <view class='footer_box'>
+    <view class='box left_box'>
+      <view class='footer_item'>
+        <image wx:if="{{consultanlInfo.status}}" bindtap="toCancel" class='img' src='../../images/heart_active.png'></image>
+        <image wx:else bindtap="toFollow" class='img' src='../../images/heart.png'></image>
+        <text>关注</text>
+      </view>
+      <navigator class='footer_item' url="../kf/kf?cId={{consultanlInfo.coun.doctorId}}" hover-class="none">
+        <image class='img' src='../../images/kf.png'></image>
+        <text>客服</text>
+      </navigator>
+    </view>
+    <view class='box'>
+      <button class='go_btn' bindtap='goBtn'>预约TA</button>
+    </view>
+  </view>
+</view>

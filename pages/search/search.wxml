@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<view class='search_box'>
+  <view class='page_row' bindtap="suo">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="" placeholder-class="phcolor" placeholder="咨询师/问题关键词" focus value="{{inputVal}}" bindconfirm="goSearch"/>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜素记录 -->
+  <view wx:for="{{sercherStorage}}" wx:key="index">
+    <view class="liclass" style="color:#9E9E9E;border-bottom:0;font-size:26rpx;" data-name="{{item.name}}" bindtap="SearchStorage">
+      <text style="width:100rpx">{{item.name}}</text>
+    </view>
+  </view>
+  <view wx:if="{{sercherStorage.length!==0}}" style="text-align:center;" bindtap="clearSearchStorage">
+   <view class="history-span">清除历史记录</view>
+  </view>
+</view>
